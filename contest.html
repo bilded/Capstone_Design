@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="https://www.bu.ac.kr/web/index.do" class="logo">학교 로고</a>
+            <div class="search-bar">
+                <input type="text" placeholder="검색창">
+            </div>
+            <a href="#" class="login">로그인</a>
+        </header>
+
+        <!-- Navigation (글쓰기, 공모전, 홈, 팀 만들기, 추천) -->
+        <nav>
+            <ul>
+                <li><a href="writing.html">글쓰기</a></li>
+                <li><a href="competitions.html">공모전</a></li>
+                <li><a href="main.html">홈</a></li>
+                <li><a href="create-team.html">팀 만들기</a></li>
+                <li><a href="recommend.html">추천</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- 분야별 카테고리 메뉴 -->
+            <div class="category-menu">
+                <h3>분야별 카테고리</h3>
+                <ul>
+                    <li><a href="#">컴퓨터 공학</a></li>
+                    <li><a href="#">정보통신학</a></li>
+                    <li><a href="#">경영학</a></li>
+                    <li><a href="#">사회복지학</a></li>
+                    <li><a href="#">디지털미디어학</a></li>
+                    <li><a href="#">영어영문학</a></li>
+                    <li><a href="#">법학</a></li>
+                    <li><a href="#">의료관리학</a></li>
+                </ul>
+            </div>
+
+            <!-- 공모전 상세 정보 및 이미지 -->
+            <div class="container1">
+                <!-- 왼쪽: 이미지 박스 -->
+                <div class="image-box">
+                    <img id="competition-image" src="" alt="공모전 이미지">
+                </div>
+
+                <!-- 오른쪽: 상세 정보 및 버튼 -->
+                <div class="details-box">
+                    <h1>공모전 상세 정보</h1>
+                    <p id="competition-details">여기에 공모전의 세부 정보가 표시됩니다.</p>
+                    <div class="button-container">
+                        <button id="apply-btn">참여하기</button>
+                        <a href="main.html">
+                            <button id="back-btn">뒤로가기</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const competitionId = urlParams.get('id');
+        console.log('선택된 공모전 ID:', competitionId);
+    
+        // 해당 공모전 ID에 맞는 데이터를 불러오거나 표시하는 로직을 추가합니다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!-- 메인 페이지 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page Layout</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="https://www.bu.ac.kr/web/index.do" class="logo">학교 로고</a>
+            <div class="search-bar">
+                <input type="text" placeholder="검색창">
+            </div>
+            <a href="#" class="login">로그인</a>
+        </header>
+        <!-- Navigation (글쓰기, 공모전, 홈, 팀 만들기, 추천) -->
+        <nav>
+            <ul>
+                <li><a href="writing.html">글쓰기</a></li>
+                <li><a href="competitions.html">공모전</a></li>
+                <li><a href="main.html">홈</a></li>
+                <li><a href="create-team.html">팀 만들기</a></li>
+                <li><a href="recommend.html">추천</a></li>
+            </ul>
+        </nav>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- 분야별 카테고리 메뉴 -->
+            <div class="category-menu">
+                <h3>분야별 카테고리</h3>
+                <ul>
+                    <li><a href="#">컴퓨터 공학</a></li>
+                    <li><a href="#">정보통신학</a></li>
+                    <li><a href="#">경영학</a></li>
+                    <li><a href="#">사회복지학</a></li>
+                    <li><a href="#">디지털미디어학</a></li>
+                    <li><a href="#">영어영문학</a></li>
+                    <li><a href="#">법학</a></li>
+                    <li><a href="#">의료관리학</a></li>
+                </ul>
+            </div>
+            <!-- 공모전 및 비교과 프로그램 섹션 -->
+            <div class="content-section">
+                <!-- 공모전 HOT 섹션 -->
+                <div class="section">
+                    <h2>공모전 HOT</h2>
+                    <div class="carousel">
+                        <button class="left" onclick="changeImage('competition', -1)">&lt;</button>
+                        <div class="carousel-images" id="competition-images">
+                            <a href="contest.html">
+                                <img src="competition_placeholder1.png" alt="공모전 포스터 1">
+                            </a>
+                            <img src="competition_placeholder2.png" alt="공모전 포스터 2">
+                            <img src="competition_placeholder3.png" alt="공모전 포스터 3">
+                            <img src="competition_placeholder4.png" alt="공모전 포스터 4">
+                        </div>
+                        <button class="right" onclick="changeImage('competition', 1)">&gt;</button>
+                    </div>
+                </div>
+
+                <!-- 비교과 프로그램 섹션 -->
+                <div class="section">
+                    <h2>비교과 프로그램</h2>
+                    <div class="carousel">
+                        <button class="left" onclick="changeImage('extracurricular', -1)">&lt;</button>
+                        <div class="carousel-images" id="extracurricular-images">
+                            <img src="extracurricular_placeholder1.png" alt="비교과 포스터 1">
+                            <img src="extracurricular_placeholder2.png" alt="비교과 포스터 2">
+                            <img src="extracurricular_placeholder3.png" alt="비교과 포스터 3">
+                            <img src="extracurricular_placeholder4.png" alt="비교과 포스터 4">
+                        </div>
+                        <button class="right" onclick="changeImage('extracurricular', 1)">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
